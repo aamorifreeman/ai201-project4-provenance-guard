@@ -2,7 +2,7 @@
 
 A local attribution-analysis API and review interface for AI201 Project 4.
 
-**Status: implemented and locally verified AI-assisted course project; awaiting review and publication/submission approval.**
+**Status: implemented and locally verified AI-assisted course project; course submission pending.**
 Codex created the plan, code, tests and technical documentation from the authenticated
 course rubric. On October 6, Aamori clarified that her professor said AI could complete
 the rest and that the online outline was not current. That updated user-reported guidance
@@ -288,12 +288,12 @@ in [STUDENT_REVIEW.md](docs/STUDENT_REVIEW.md); add personal reflections only if
 [Exact rubric coverage](docs/RUBRIC_CHECKLIST.md) · [Course findings](docs/COURSE_FINDINGS.md)
 · [Walkthrough outline](demo/WALKTHROUGH.md).
 
-The [AI-narrated technical demo](demo/provenance-guard-demo.mp4) replays actual recorded
+The [AI-narrated technical demo](https://drive.google.com/file/d/1em6m3QMpger95qRKBHb0nO-HF9Qmv8DB/view) replays actual recorded
 API evidence and explains design decisions. It is clearly labeled synthetic narration,
 not Aamori's voice or a claimed live screen recording. Its [transcript](demo/NARRATION.md)
-is included. A personal walkthrough outline is also available if the instructor expects
+is included. The video is stored on Google Drive rather than in Git history. **Drive access is currently restricted to its owner; reviewer access is pending sharing approval.** A personal walkthrough outline is also available if the instructor expects
 Aamori on camera or narrating; that expectation has not been separately confirmed.
 
-No hosted GitHub URL exists yet. Review the deliverables and clarify late-credit policy,
-then approve creating/pushing the remote repository and submitting through Project 4's
-Show tab. The Howard Canvas assignment links to the same CodePath project.
+Public repository: https://github.com/aamorifreeman/ai201-project4-provenance-guard.
+Course submission remains on hold until separately authorized. The Howard Canvas
+assignment links to the same CodePath project. Late-credit eligibility is unconfirmed.
