@@ -291,7 +291,7 @@ in [STUDENT_REVIEW.md](docs/STUDENT_REVIEW.md); add personal reflections only if
 The [AI-narrated technical demo](https://drive.google.com/file/d/1em6m3QMpger95qRKBHb0nO-HF9Qmv8DB/view) replays actual recorded
 API evidence and explains design decisions. It is clearly labeled synthetic narration,
 not Aamori's voice or a claimed live screen recording. Its [transcript](demo/NARRATION.md)
-is included. The video is stored on Google Drive rather than in Git history. **Drive access is currently restricted to its owner; reviewer access is pending sharing approval.** A personal walkthrough outline is also available if the instructor expects
+is included. The video is stored on Google Drive rather than in Git history. **Drive access is currently restricted to its owner; anyone-with-link viewing is approved but has not yet been applied because the available connector does not expose that permission.** A personal walkthrough outline is also available if the instructor expects
 Aamori on camera or narrating; that expectation has not been separately confirmed.
 
 Public repository: https://github.com/aamorifreeman/ai201-project4-provenance-guard.

@@ -4,9 +4,9 @@ Project: **Provenance Guard** — AI201 Applications of AI Engineering.
 
 ## Repository and files
 
-Proposed target: `aamorifreeman/ai201-project4-provenance-guard`, matching the owner of the existing Projects 1 and 2 remotes. Proposed visibility: public source repository, subject to Aamori’s explicit approval; no visibility requirement was visible in the Project 4 page or submission modal. This does not deploy the app.
-No remote repository has been created or pushed; the submission URL will only exist
-after approval. Source, root README/planning.md, evidence, tests and demo are ready locally.
+Proposed target: `aamorifreeman/ai201-project4-provenance-guard`, matching the owner of the existing Projects 1 and 2 remotes. Approved visibility: public source repository; no visibility requirement was visible in the Project 4 page or submission modal. This does not deploy the app.
+Publication target: https://github.com/aamorifreeman/ai201-project4-provenance-guard.
+The public source repository and Drive demo upload are authorized; course submission is not. Source, root README/planning.md, evidence, tests and demo are ready locally.
 
 ## Description for review
 
@@ -37,3 +37,9 @@ Late credit remains subject to instructor policy; do not promise acceptance or a
 ## Actual submission form inspected October 6
 
 The Project 4 Submit button opens a modal with **GitHub Project URL**, **Hours Spent**, and **Notes**, plus a final Submit button. No separate video field was present. Keep the video linked from the repository README; notes can point to the walkthrough. The form says submissions can be revised afterward. Nothing was entered or submitted. Hours Spent must be supplied truthfully by Aamori; do not invent student work time from agent runtime.
+
+## Drive walkthrough
+
+https://drive.google.com/file/d/1em6m3QMpger95qRKBHb0nO-HF9Qmv8DB/view
+
+Uploaded and verified at 1,932,912 bytes. Anyone-with-link viewer access is approved but not yet applied: the available connector only supports named-user or company-domain sharing. Current permissions list only the owner. The MP4 remains in the original local project and is excluded from published Git history.
