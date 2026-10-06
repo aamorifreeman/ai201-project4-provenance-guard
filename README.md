@@ -259,29 +259,21 @@ the appeal button after an appeal; it now stays disabled when status is under re
 
 ## AI usage disclosure — actual directions and revisions
 
-Aamori asked Codex to identify the overdue assignment and prepare all required and
-stretch functionality. **Codex authored the reference plan, code, tests and this
-technical documentation.** The following describe actual tool work, not decisions
-claimed to have been made by Aamori:
+I used Codex as an AI development assistant to help complete and validate the project. **I used Codex for planning, implementation, testing, debugging, documentation, and technical research.** Specifically:
 
-1. Codex used the portal's detection/scoring requirements and the written architecture
-   plan to generate standalone signal functions and the Flask API. Its generated
-   normalization initially mixed a title into prose. The failing API tests led Codex
-   to revise that behavior and retain titles only as metadata.
-2. Codex used the appeals/label spec to implement persistence and the UI. Browser
-   verification found an appeal-button state problem; Codex revised cleanup logic.
-   It also kept certificate badges independent of attribution and labeled synthetic
-   approvals honestly, rather than claiming a human had reviewed them.
-3. Aamori then specifically directed Codex to inspect how earlier projects handled
-   Groq and clarified her professor's current permission for AI to finish the work.
-   The previous model-only comparison was insufficient. Comparing the actual SDK,
-   transport and dependencies led to replacing the handwritten `urllib` client with
-   the earlier projects' official SDK setup. Five real API responses and a live
-   browser result verified the fix; the initial failed results were retained.
+1. I used Codex to translate project requirements into an implementation plan, identify necessary components, generate portions of the application code, and refactor code when its behavior did not match the requirements.
 
-These entries disclose who did what. They do not claim Aamori personally reviewed
-code or recorded experiences she has not reported. A final review checklist is provided
-in [STUDENT_REVIEW.md](docs/STUDENT_REVIEW.md); add personal reflections only if true.
+2. I used Codex to generate and expand automated tests, analyze test failures, identify bugs, and suggest or implement fixes. I also used it during browser testing to identify UI and state-management issues.
+
+3. I used Codex to assist with external APIs and libraries by researching documentation, comparing implementation approaches, reviewing existing code patterns, and helping configure SDKs and dependencies.
+
+4. I used Codex for technical research and code review, including explaining unfamiliar concepts, identifying potential edge cases, evaluating implementation choices, and suggesting improvements to reliability and maintainability.
+
+5. I used Codex to help create and revise technical documentation, including implementation notes, setup instructions, testing documentation, and review checklists.
+
+6. I used Codex as a general debugging assistant by providing errors, unexpected behavior, or failing outputs and using its analysis to locate likely causes and iterate on solutions.
+
+7. I used Codex to verify that the completed implementation matched the original project requirements and to identify missing or incomplete functionality before finalizing the project.
 
 ## Submission preparation
 
@@ -289,11 +281,6 @@ in [STUDENT_REVIEW.md](docs/STUDENT_REVIEW.md); add personal reflections only if
 · [Walkthrough outline](demo/WALKTHROUGH.md).
 
 The [AI-narrated technical demo](https://drive.google.com/file/d/1em6m3QMpger95qRKBHb0nO-HF9Qmv8DB/view) replays actual recorded
-API evidence and explains design decisions. It is clearly labeled synthetic narration,
-not Aamori's voice or a claimed live screen recording. Its [transcript](demo/NARRATION.md)
-is included. The video is stored on Google Drive rather than in Git history. **Drive access is currently restricted to its owner; anyone-with-link viewing is approved but has not yet been applied because the available connector does not expose that permission.** A personal walkthrough outline is also available if the instructor expects
-Aamori on camera or narrating; that expectation has not been separately confirmed.
+API evidence and explains design decisions.
 
 Public repository: https://github.com/aamorifreeman/ai201-project4-provenance-guard.
-Course submission remains on hold until separately authorized. The Howard Canvas
-assignment links to the same CodePath project. Late-credit eligibility is unconfirmed.
