@@ -1,23 +1,20 @@
-# Student review before submission
+# Final review before publication/submission
 
-This reference is not a substitute for the course's required student reasoning.
-Work through these concrete decisions and change the design/code where you disagree:
+Aamori clarified that her professor permits AI to finish the work. Implementation is
+complete under that reported guidance; this checklist is a practical final review,
+not a claim that Aamori already performed it.
 
-1. Explain each signal in your own words. Compare sentence structure with lexical
-   markers and self-reported metadata. Identify how each can be fooled.
-2. Choose whether 0.80 AI / 0.25 human thresholds and the abstention rules match your
-   platform's false-positive costs. Run the boundary tests and revise if necessary.
-3. Explain why metadata is not proof. Decide what evidence a real human reviewer
-   should require for a badge and why the local demo is not secure enough to deploy.
-4. Trace an appeal through the database and audit events. Explain why the original
-   classification should remain immutable.
-5. Review the two real implementation revisions in README. Reproduce them or choose
-   your own improvement, then document what **you** reviewed, revised or overrode.
-6. Read all three labels aloud to someone unfamiliar with the project; record what
-   they understood. Do not claim this usability check happened until it actually does.
-7. Run the tests, inspect full JSON examples, then record your personal walkthrough.
-8. Resolve the conflicting late policies with the instructor. Sending any message,
-   publishing/pushing the repository or submitting the portal form requires approval.
+1. Open the local app and inspect the signal scores and uncertainty text.
+2. Review the actual live examples, especially the generic AI example that remained
+   uncertain. Scores are evidence indices, not calibrated authorship probabilities.
+3. Inspect the appeal log and the independent certificate workflow. Reviewers in this
+   local prototype are not authenticated; do not deploy it publicly as-is.
+4. Watch the AI-narrated technical demo. It replays recorded results, clearly labels
+   synthetic narration, and does not impersonate Aamori or invent personal experience.
+5. Read the honest AI-use section. Add personal decisions or reflection only if true.
+6. Clarify late-credit eligibility with the instructor; no message has been sent.
+7. Approve GitHub repository publication/push and the final portal submission.
 
-No prewritten first-person reflection is supplied because that would fabricate your
-experience. Add your actual review notes and changes here before claiming those points.
+If the instructor specifically expects a personal on-camera/narrated portfolio video,
+record one using demo/WALKTHROUGH.md. The generated technical demo is not represented
+as Aamori's personal recording.

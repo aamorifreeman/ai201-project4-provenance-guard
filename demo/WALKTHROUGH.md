@@ -1,15 +1,16 @@
 # Personal walkthrough outline (about 2 minutes)
 
-Aamori should record this herself after reviewing and adapting the implementation.
-No personal walkthrough video has been recorded or fabricated.
+Optional personal-recording outline. An AI-narrated technical walkthrough is included
+in provenance-guard-demo.mp4; it replays real recorded API evidence and does not pretend
+to be Aamori. Use this outline if a personal portfolio recording is desired or required.
 
 * 0:00–0:15 — Name Provenance Guard and the problem: show uncertainty, don't claim
   that a writing-style detector can prove cheating or authorship.
 * 0:15–0:40 — Load the sample; select structured metadata and Human; analyze.
   Explain the individual scores and weights. Contrast evidence index and confidence.
 * 0:40–0:55 — Show AI and uncertain metadata examples from evidence/examples.json.
-  Acknowledge metadata is self-reported and affects the score. Explain the live
-  semantic service's current 403 limitation and offline abstention.
+  Acknowledge metadata is self-reported and affects the score. Show the successful
+  live text results; explain offline abstention when a provider is unavailable.
 * 0:55–1:15 — Submit a reasoned appeal; show under_review and the unchanged original
   classification next to the new audit event.
 * 1:15–1:35 — Show a draft/process verification request and distinct reviewed badge.

@@ -3,8 +3,7 @@ import json
 import math
 import re
 import statistics
-import urllib.error
-import urllib.request
+from groq import Groq, APIError
 
 LABELS = {
     'likely_ai': 'This work shows strong signs of AI generation. This assessment can be wrong; the creator can request a review.',
@@ -62,11 +61,14 @@ def semantic(text, api_key='', model='openai/gpt-oss-120b', transport=None):
             {'role':'user', 'content': json.dumps({'untrusted_text': text})},
         ],
     }
-    request = urllib.request.Request('https://api.groq.com/openai/v1/chat/completions',
-        data=json.dumps(body).encode(), headers={'Authorization': 'Bearer '+api_key, 'Content-Type':'application/json'})
     try:
-        with (transport or urllib.request.urlopen)(request, timeout=12) as response:
-            data = json.load(response)
+        if transport is not None:
+            data = transport(body, timeout=15)
+        else:
+            # Same official SDK and ordinary defaults used by prior course projects.
+            # Do not customize headers, proxy identity, TLS checks or security settings.
+            with Groq(api_key=api_key, timeout=15, max_retries=0) as client:
+                data = client.chat.completions.create(**body).model_dump()
         assessment = json.loads(data['choices'][0]['message']['content'])
         score = assessment['ai_score']
         if isinstance(score, bool) or not isinstance(score, (float, int)) or not math.isfinite(score) or not 0 <= score <= 1:
@@ -75,7 +77,7 @@ def semantic(text, api_key='', model='openai/gpt-oss-120b', transport=None):
         if not isinstance(explanation, str) or not explanation.strip():
             raise ValueError('missing explanation')
         return signal('semantic', score, .55, {'model':model, 'explanation':explanation[:1000]})
-    except (urllib.error.URLError, TimeoutError, ValueError, KeyError, TypeError, IndexError, OSError):
+    except (APIError, TimeoutError, ValueError, KeyError, TypeError, IndexError, OSError):
         # Do not expose provider errors, which can contain credentials or submitted text.
         return signal('semantic', None, .55, {'reason':'Provider unavailable or invalid response'}, False)
 

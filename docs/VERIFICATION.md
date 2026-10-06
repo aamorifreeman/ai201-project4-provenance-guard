@@ -1,39 +1,42 @@
-# Verification record
+# Verification record — final technical state
 
-Executed October 6, 2026 on the user's Mac with Python 3.13.7.
+October 6, 2026 · user's Mac · Python 3.13.7.
 
-* `python -m pytest -q`: **40 passed**. Covers three metadata labels, four course
-  text examples, eight boundary cases, conflict damping, short/non-English inputs,
-  malformed/wrong-type/oversized payloads, appeal persistence and original decision
-  preservation, duplicate and concurrent appeals, restart persistence, 429 and retry
-  headers, creator-ID bypass resistance, certificate review/rejection/hash binding,
-  analytics, optional provider response validation, timeout and UI resources.
-* `python generate_evidence.py`: passed assertions. Seven decisions plus one appeal
-  and two verification events give 10 structured events. All three label variants
-  reached through the actual metadata API. Rate test: ten 200s, two 429s.
-* Mac Chrome browser: submitted metadata using Load sample, saw likely_human at
-  0.8091 confidence / 0.1909 AI index; submitted an appeal; saw under review and
-  original classification plus reasoning in audit trail; submitted an earlier draft
-  and process description; used an explicitly synthetic test reviewer to exercise
-  approval; saw distinct credential badge and verified count 1. This was not a real
-  human authorship verification. No external website was changed.
-* Initial tests failed because the title changed prose sentence variance. Fixed by
-  excluding title from text statistics. Browser verification found appeal-button
-  cleanup re-enabled an already appealed action; corrected the state logic.
-* Real Groq attempt: four course examples returned unavailable. Read-only provider
-  diagnostic returned **HTTP 403**. Existing key was read only for the call, not
-  copied into the repo or printed. No new credentials created. Cause was not proven;
-  do not assume invalid key versus provider/network denial without further evidence.
-* All certificate approvals in generated evidence are marked automated synthetic
-  fixtures. Mock semantic responses only verify adapter behavior.
+* **41 automated tests passed** after the SDK fix. Scope: three offline metadata
+  labels; four text examples; score boundaries; disagreement; short/non-English input;
+  malformed/types/size validation; appeals, duplicate/concurrent handling and original
+  decision preservation; persistence; real 429s/headers; certificate review and rejection;
+  content hash binding; analytics; model JSON validation/timeouts; SDK request contract.
+* `generate_evidence.py`: seven decisions, one appeal and two verification events,
+  all synthetic. Rate evidence: ten 200s then two 429s. Certificate approvals in
+  evidence are explicitly test fixtures, not actual human authorship verification.
+* **Five real Groq calls through POST /submit succeeded**, using Groq 0.15.0 +
+  httpx 0.28.1 with ordinary defaults, existing key, openai/gpt-oss-120b and a 1600-token
+  budget. All three text labels were reached: AI control 0.8817, human review 0.8313,
+  formal borderline uncertain 0.5540. Individual scores and responses are recorded.
+* **Mac Chrome browser live inference passed:** the course review returned semantic
+  score 0.08, likely_human confidence 0.8313 and all three signals available. Earlier
+  browser checks also verified metadata, appeals/status/audit linkage, certificate
+  request/approval/badge, and dashboard updates. No external site was changed.
+* The initial urllib failure (403/1010) and model-only attempt are retained separately.
+  Comparing the actual client/dependencies to prior projects identified the ordinary
+  official SDK configuration that worked. No header spoofing, proxy/identity switch,
+  TLS bypass, new credential, permission change or paid-plan setup was used.
+* Other real fixes: title removed from prose statistics after two failed integration
+  tests; appeal button remains disabled after an appeal; invalid provider output is
+  unavailable rather than converted into a fake prediction.
 
-Not verified: live semantic predictions, scientific calibration/accuracy, authenticated
-multi-user access, public deployment, student understanding, recorded personal video,
-late-credit eligibility or actual portal submission. No grade is guaranteed.
+No scientific calibration/accuracy claim is made. Generic AI prose stayed uncertain
+and lightly edited AI text leaned toward human evidence, demonstrating detector limits.
+The local prototype has no production authentication or reviewer access control.
+No publication, deployment, remote push or portal submission has occurred. Late-credit
+eligibility is not established. Any student-specific personal reflection must be true.
 
-Follow-up: sanitized provider response is HTTP 403 with body `error code: 1010`.
-Stopped that access-denied path. Updated configuration to the existing Project 1/2
-model (`openai/gpt-oss-120b`) and 1600 completion tokens, verified against current
-Groq docs and an added request-contract test. No new live inference attempted.
-Current suite: **41 passed**. Plain-text end-to-end three-label reachability remains
-unverified; metadata three-label coverage does not erase that limitation.
+## Demo artifact verification
+
+`demo/provenance-guard-demo.mp4`: 165.956 seconds, 1280x720 H.264 video with AAC audio,
+1,932,912 bytes. ffmpeg decoded the complete file without errors. A representative
+frame was visually inspected for text fit and consistency with live-model.json.
+The video is an explicitly AI-narrated replay of recorded API evidence, not a fake
+live screen capture or personal student recording. Narration transcript and generator
+are included. The temporary render files are ignored by Git.

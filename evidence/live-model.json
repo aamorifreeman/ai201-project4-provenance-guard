@@ -1,35 +1,43 @@
 {
-  "model": "llama-3.3-70b-versatile",
+  "model": "openai/gpt-oss-120b",
+  "client": "groq 0.15.0 / httpx 0.28.1, ordinary defaults",
+  "mode": "live semantic inference through POST /submit",
   "examples": [
     {
       "name": "course_ai",
       "input": "Artificial intelligence represents a transformative paradigm shift in modern society. It is important to note that while the benefits of AI are numerous, it is equally essential to consider the ethical implications. Furthermore, stakeholders across various sectors must collaborate to ensure responsible deployment.",
       "response": {
+        "ai_score": 0.7399,
+        "appeal_reasoning": null,
         "attribution": "uncertain",
+        "certificate": null,
         "confidence": 0.69,
-        "ai_score": 0.6908,
         "confidence_meaning": "heuristic evidence strength; not calibrated authorship probability",
+        "content_hash": "e1650029adb4768e9f361dbb5f371f5994f707b8122c797fe3ea558504e7f526",
+        "content_id": "e5fa91e3-a503-4c63-bdbf-3acf3edb8df9",
+        "content_type": "text",
+        "creator_id": "synthetic-live-verification",
         "label": "We cannot confidently tell how this work was made. Please do not treat this assessment as proof of AI use.",
+        "metadata": null,
         "signals": [
           {
-            "name": "stylometry",
-            "score": 0.5235,
-            "weight": 0.25,
-            "evidence": {
-              "sentence_length_cv": 0.3793,
-              "vocabulary_diversity": 0.8837,
-              "punctuation_per_word": 0.0465,
-              "words": 43,
-              "sentences": 3
-            },
             "available": true,
-            "normalized_weight": 0.5556
+            "evidence": {
+              "punctuation_per_word": 0.0465,
+              "sentence_length_cv": 0.3793,
+              "sentences": 3,
+              "vocabulary_diversity": 0.8837,
+              "words": 43
+            },
+            "name": "stylometry",
+            "normalized_weight": 0.25,
+            "score": 0.5235,
+            "weight": 0.25
           },
           {
-            "name": "lexical",
-            "score": 0.9,
-            "weight": 0.2,
+            "available": true,
             "evidence": {
+              "conversational_markers": [],
               "disclosures": [],
               "formal_markers": [
                 "it is important to note",
@@ -37,189 +45,290 @@
                 "transformative paradigm",
                 "stakeholders",
                 "responsible deployment"
-              ],
-              "conversational_markers": []
+              ]
             },
-            "available": true,
-            "normalized_weight": 0.4444
+            "name": "lexical",
+            "normalized_weight": 0.2,
+            "score": 0.9,
+            "weight": 0.2
           },
           {
-            "name": "semantic",
-            "score": null,
-            "weight": 0.55,
+            "available": true,
             "evidence": {
-              "reason": "Provider unavailable or invalid response"
+              "explanation": "The passage is highly formal, uses generic statements and balanced phrasing typical of AI\u2011generated content. It lacks personal anecdotes, specific examples, or nuanced argumentation that often appear in human writing. The style is polished and neutral, which aligns with common AI output patterns, suggesting a higher probability of AI authorship.",
+              "model": "openai/gpt-oss-120b"
             },
-            "available": false,
-            "normalized_weight": 0
+            "name": "semantic",
+            "normalized_weight": 0.55,
+            "score": 0.78,
+            "weight": 0.55
           }
         ],
-        "uncertainty_reasons": [
-          "Fewer than three available signals; conservative abstention."
-        ]
+        "status": "classified",
+        "text": "Artificial intelligence represents a transformative paradigm shift in modern society. It is important to note that while the benefits of AI are numerous, it is equally essential to consider the ethical implications. Furthermore, stakeholders across various sectors must collaborate to ensure responsible deployment.",
+        "timestamp": "2026-10-06T17:58:51.457649+00:00",
+        "uncertainty_reasons": []
       }
     },
     {
       "name": "course_human",
       "input": "ok so i finally tried that new ramen place downtown and honestly? underwhelming. the broth was fine but they put WAY too much sodium in it and i was thirsty for like three hours after. my friend got the spicy version and said it was better. probably won't go back unless someone drags me there",
       "response": {
-        "attribution": "uncertain",
-        "confidence": 0.69,
-        "ai_score": 0.2772,
+        "ai_score": 0.1688,
+        "appeal_reasoning": null,
+        "attribution": "likely_human",
+        "certificate": null,
+        "confidence": 0.8313,
         "confidence_meaning": "heuristic evidence strength; not calibrated authorship probability",
-        "label": "We cannot confidently tell how this work was made. Please do not treat this assessment as proof of AI use.",
+        "content_hash": "2fcbb878547cc378d1f3a0bca6fafbe70c235fb7207fe747fcd4710b31ed8957",
+        "content_id": "2871f3e8-247f-454c-8701-4f85eea0e9e7",
+        "content_type": "text",
+        "creator_id": "synthetic-live-verification",
+        "label": "This work shows strong signs of human writing. This is an estimate, not proof of authorship.",
+        "metadata": null,
         "signals": [
           {
-            "name": "stylometry",
-            "score": 0.435,
-            "weight": 0.25,
-            "evidence": {
-              "sentence_length_cv": 0.6112,
-              "vocabulary_diversity": 0.8727,
-              "punctuation_per_word": 0.0182,
-              "words": 55,
-              "sentences": 5
-            },
             "available": true,
-            "normalized_weight": 0.5556
+            "evidence": {
+              "punctuation_per_word": 0.0182,
+              "sentence_length_cv": 0.6112,
+              "sentences": 5,
+              "vocabulary_diversity": 0.8727,
+              "words": 55
+            },
+            "name": "stylometry",
+            "normalized_weight": 0.25,
+            "score": 0.435,
+            "weight": 0.25
           },
           {
-            "name": "lexical",
-            "score": 0.08,
-            "weight": 0.2,
+            "available": true,
             "evidence": {
-              "disclosures": [],
-              "formal_markers": [],
               "conversational_markers": [
                 "honestly",
                 "ok so",
                 "my friend",
                 "won't",
                 "underwhelming"
-              ]
+              ],
+              "disclosures": [],
+              "formal_markers": []
             },
-            "available": true,
-            "normalized_weight": 0.4444
+            "name": "lexical",
+            "normalized_weight": 0.2,
+            "score": 0.08,
+            "weight": 0.2
           },
           {
-            "name": "semantic",
-            "score": null,
-            "weight": 0.55,
+            "available": true,
             "evidence": {
-              "reason": "Provider unavailable or invalid response"
+              "explanation": "The text is informal, uses lowercase personal pronouns, slang, and a conversational tone with minor grammatical quirks typical of spontaneous human writing. It lacks the polished structure, balanced phrasing, or subtle self\u2011correction often seen in AI\u2011generated content. These cues point toward a human author, though a low\u2011confidence AI could mimic this style, so the score reflects slight uncertainty.",
+              "model": "openai/gpt-oss-120b"
             },
-            "available": false,
-            "normalized_weight": 0
+            "name": "semantic",
+            "normalized_weight": 0.55,
+            "score": 0.08,
+            "weight": 0.55
           }
         ],
-        "uncertainty_reasons": [
-          "Fewer than three available signals; conservative abstention."
-        ]
+        "status": "classified",
+        "text": "ok so i finally tried that new ramen place downtown and honestly? underwhelming. the broth was fine but they put WAY too much sodium in it and i was thirsty for like three hours after. my friend got the spicy version and said it was better. probably won't go back unless someone drags me there",
+        "timestamp": "2026-10-06T17:58:52.153844+00:00",
+        "uncertainty_reasons": []
       }
     },
     {
       "name": "formal_borderline",
       "input": "The relationship between monetary policy and asset price inflation has been extensively studied in the literature. Central banks face a fundamental tension between their mandate for price stability and the unintended consequences of prolonged low interest rates on equity and real estate valuations.",
       "response": {
+        "ai_score": 0.554,
+        "appeal_reasoning": null,
         "attribution": "uncertain",
-        "confidence": 0.5588,
-        "ai_score": 0.5588,
+        "certificate": null,
+        "confidence": 0.554,
         "confidence_meaning": "heuristic evidence strength; not calibrated authorship probability",
+        "content_hash": "92994cf3b4a8ccc9870e7e06cd1d2c53a22e3cf333fc8bb3867e56ba9662b8ad",
+        "content_id": "86467001-a287-41f2-bfff-38bcce2843ac",
+        "content_type": "text",
+        "creator_id": "synthetic-live-verification",
         "label": "We cannot confidently tell how this work was made. Please do not treat this assessment as proof of AI use.",
+        "metadata": null,
         "signals": [
           {
-            "name": "stylometry",
-            "score": 0.6058,
-            "weight": 0.25,
+            "available": true,
             "evidence": {
-              "sentence_length_cv": 0.2558,
-              "vocabulary_diversity": 0.8605,
               "punctuation_per_word": 0.0,
-              "words": 43,
-              "sentences": 2
+              "sentence_length_cv": 0.2558,
+              "sentences": 2,
+              "vocabulary_diversity": 0.8605,
+              "words": 43
             },
-            "available": true,
-            "normalized_weight": 0.5556
+            "name": "stylometry",
+            "normalized_weight": 0.25,
+            "score": 0.6058,
+            "weight": 0.25
           },
           {
-            "name": "lexical",
-            "score": 0.5,
-            "weight": 0.2,
+            "available": true,
             "evidence": {
+              "conversational_markers": [],
               "disclosures": [],
-              "formal_markers": [],
-              "conversational_markers": []
+              "formal_markers": []
             },
-            "available": true,
-            "normalized_weight": 0.4444
+            "name": "lexical",
+            "normalized_weight": 0.2,
+            "score": 0.5,
+            "weight": 0.2
           },
           {
-            "name": "semantic",
-            "score": null,
-            "weight": 0.55,
+            "available": true,
             "evidence": {
-              "reason": "Provider unavailable or invalid response"
+              "explanation": "The passage is a concise, formal academic statement with generic phrasing (e.g., \"extensively studied in the literature\", \"fundamental tension\"). Such language is typical of both scholarly writing and AI\u2011generated text trained on academic corpora. There are no clear markers of human idiosyncrasy (personal anecdotes, nuanced argumentation) nor obvious AI artifacts (repetitive structures, unnatural phrasing). The neutrality and generic nature tilt the balance slightly toward AI, but uncertainty remains, yielding a moderate score.",
+              "model": "openai/gpt-oss-120b"
             },
-            "available": false,
-            "normalized_weight": 0
+            "name": "semantic",
+            "normalized_weight": 0.55,
+            "score": 0.55,
+            "weight": 0.55
           }
         ],
-        "uncertainty_reasons": [
-          "Fewer than three available signals; conservative abstention."
-        ]
+        "status": "classified",
+        "text": "The relationship between monetary policy and asset price inflation has been extensively studied in the literature. Central banks face a fundamental tension between their mandate for price stability and the unintended consequences of prolonged low interest rates on equity and real estate valuations.",
+        "timestamp": "2026-10-06T17:58:53.101387+00:00",
+        "uncertainty_reasons": []
       }
     },
     {
       "name": "edited_ai_borderline",
       "input": "I've been thinking a lot about remote work lately. There are genuine tradeoffs \u2014 flexibility and no commute on one side, isolation and blurred work-life boundaries on the other. Studies show productivity varies widely by individual and role type.",
       "response": {
+        "ai_score": 0.3395,
+        "appeal_reasoning": null,
         "attribution": "uncertain",
-        "confidence": 0.5099,
-        "ai_score": 0.5099,
+        "certificate": null,
+        "confidence": 0.6605,
         "confidence_meaning": "heuristic evidence strength; not calibrated authorship probability",
+        "content_hash": "a481046aeb9c631996eb97df3571aea634275f4b9aa9fc95657e43191b74a807",
+        "content_id": "c8fd3eac-e9e3-440c-988d-56e000b74f26",
+        "content_type": "text",
+        "creator_id": "synthetic-live-verification",
         "label": "We cannot confidently tell how this work was made. Please do not treat this assessment as proof of AI use.",
+        "metadata": null,
         "signals": [
           {
-            "name": "stylometry",
-            "score": 0.5178,
-            "weight": 0.25,
+            "available": true,
             "evidence": {
-              "sentence_length_cv": 0.382,
-              "vocabulary_diversity": 0.8974,
               "punctuation_per_word": 0.0513,
-              "words": 39,
-              "sentences": 3
+              "sentence_length_cv": 0.382,
+              "sentences": 3,
+              "vocabulary_diversity": 0.8974,
+              "words": 39
             },
-            "available": true,
-            "normalized_weight": 0.5556
+            "name": "stylometry",
+            "normalized_weight": 0.25,
+            "score": 0.5178,
+            "weight": 0.25
           },
           {
-            "name": "lexical",
-            "score": 0.5,
-            "weight": 0.2,
+            "available": true,
             "evidence": {
+              "conversational_markers": [],
               "disclosures": [],
-              "formal_markers": [],
-              "conversational_markers": []
+              "formal_markers": []
             },
-            "available": true,
-            "normalized_weight": 0.4444
+            "name": "lexical",
+            "normalized_weight": 0.2,
+            "score": 0.5,
+            "weight": 0.2
           },
           {
-            "name": "semantic",
-            "score": null,
-            "weight": 0.55,
+            "available": true,
             "evidence": {
-              "reason": "Provider unavailable or invalid response"
+              "explanation": "The text uses a personal, first\u2011person voice and presents a nuanced, balanced view of remote work, typical of a human writer. It lacks the overly generic or repetitive phrasing often seen in AI\u2011generated content, and the sentence structure is natural and varied. While the content is concise and could be produced by an AI, there are no strong hallmarks (e.g., overly formal tone, unnatural transitions, or repeated filler) that would suggest AI authorship, so the likelihood of AI generation is low.",
+              "model": "openai/gpt-oss-120b"
             },
-            "available": false,
-            "normalized_weight": 0
+            "name": "semantic",
+            "normalized_weight": 0.55,
+            "score": 0.2,
+            "weight": 0.55
           }
         ],
-        "uncertainty_reasons": [
-          "Fewer than three available signals; conservative abstention."
-        ]
+        "status": "classified",
+        "text": "I've been thinking a lot about remote work lately. There are genuine tradeoffs \u2014 flexibility and no commute on one side, isolation and blurred work-life boundaries on the other. Studies show productivity varies widely by individual and role type.",
+        "timestamp": "2026-10-06T17:58:53.908248+00:00",
+        "uncertainty_reasons": []
       }
+    },
+    {
+      "name": "explicit_ai_disclosure",
+      "input": "As an AI language model, I do not have personal experiences or feelings. This AI-generated paragraph provides a balanced overview of sustainable urban development. It is important to note that effective planning requires collaboration among stakeholders. Furthermore, responsible deployment of innovative technologies can enhance community resilience. In conclusion, a comprehensive approach integrates environmental stewardship, economic opportunity, and social inclusion.",
+      "response": {
+        "ai_score": 0.8817,
+        "appeal_reasoning": null,
+        "attribution": "likely_ai",
+        "certificate": null,
+        "confidence": 0.8817,
+        "confidence_meaning": "heuristic evidence strength; not calibrated authorship probability",
+        "content_hash": "3665da9e0f8f4a3d7f830383945fc96845825ab29d3e634e3c4f97700491832c",
+        "content_id": "67eb9f36-470d-4235-9e48-aae72510a826",
+        "content_type": "text",
+        "creator_id": "synthetic-live-verification",
+        "label": "This work shows strong signs of AI generation. This assessment can be wrong; the creator can request a review.",
+        "metadata": null,
+        "signals": [
+          {
+            "available": true,
+            "evidence": {
+              "punctuation_per_word": 0.0833,
+              "sentence_length_cv": 0.0913,
+              "sentences": 5,
+              "vocabulary_diversity": 0.95,
+              "words": 60
+            },
+            "name": "stylometry",
+            "normalized_weight": 0.25,
+            "score": 0.6248,
+            "weight": 0.25
+          },
+          {
+            "available": true,
+            "evidence": {
+              "conversational_markers": [],
+              "disclosures": [
+                "as an ai",
+                "ai-generated"
+              ],
+              "formal_markers": [
+                "it is important to note",
+                "furthermore",
+                "in conclusion",
+                "stakeholders",
+                "responsible deployment"
+              ]
+            },
+            "name": "lexical",
+            "normalized_weight": 0.2,
+            "score": 0.96,
+            "weight": 0.2
+          },
+          {
+            "available": true,
+            "evidence": {
+              "explanation": "The text explicitly states it is produced by an AI language model, uses generic balanced overview language, lacks personal anecdotes, and contains typical AI phrasing such as 'balanced overview' and 'in conclusion', all strong indicators of AI authorship.",
+              "model": "openai/gpt-oss-120b"
+            },
+            "name": "semantic",
+            "normalized_weight": 0.55,
+            "score": 0.97,
+            "weight": 0.55
+          }
+        ],
+        "status": "classified",
+        "text": "As an AI language model, I do not have personal experiences or feelings. This AI-generated paragraph provides a balanced overview of sustainable urban development. It is important to note that effective planning requires collaboration among stakeholders. Furthermore, responsible deployment of innovative technologies can enhance community resilience. In conclusion, a comprehensive approach integrates environmental stewardship, economic opportunity, and social inclusion.",
+        "timestamp": "2026-10-06T17:59:42.988168+00:00",
+        "uncertainty_reasons": []
+      },
+      "provenance": "Written by Codex as a synthetic positive control; not representative of all AI text."
     }
   ]
 }

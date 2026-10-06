@@ -150,9 +150,9 @@ def test_analytics_no_events_double_count(client):
     assert stats['detection_patterns']=={'likely_ai':1,'likely_human':1,'uncertain':0}
 
 def transport_for(assessment):
-    def transport(req,timeout):
-        assert timeout==12
-        return io.BytesIO(json.dumps({'choices':[{'message':{'content':json.dumps(assessment)}}]}).encode())
+    def transport(body,timeout):
+        assert timeout==15
+        return {'choices':[{'message':{'content':json.dumps(assessment)}}]}
     return transport
 
 @pytest.mark.parametrize('score',[True,'0.8',None,-1,2,float('nan'),float('inf')])
@@ -162,7 +162,7 @@ def test_semantic_rejects_invalid_model_scores(score):
 def test_semantic_contract_and_failure():
     r=semantic(AI,'synthetic-key',transport=transport_for({'ai_score':.92,'explanation':'Synthetic provider response'}))
     assert r['available'] and r['score']==.92
-    def offline(req,timeout):
+    def offline(body,timeout):
         raise TimeoutError()
     assert not semantic(AI,'synthetic-key',transport=offline)['available']
     assert not semantic(AI)['available']
@@ -177,10 +177,9 @@ def test_ui_and_untrusted_input(client):
     assert 'innerHTML' not in script
 
 def test_existing_course_model_request_budget():
-    def transport(req, timeout):
-        body=json.loads(req.data)
+    def transport(body, timeout):
         assert body['model']=='openai/gpt-oss-120b'
         assert body['max_completion_tokens']==1600
         assert body['response_format']=={'type':'json_object'}
-        return io.BytesIO(json.dumps({'choices':[{'message':{'content':json.dumps({'ai_score':.5,'explanation':'Synthetic request-contract test'})}}]}).encode())
+        return {'choices':[{'message':{'content':json.dumps({'ai_score':.5,'explanation':'Synthetic request-contract test'})}}]}
     assert semantic(AI,'synthetic-key',transport=transport)['available']

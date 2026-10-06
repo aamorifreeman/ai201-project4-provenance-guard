@@ -2,13 +2,13 @@
 
 A local attribution-analysis API and review interface for AI201 Project 4.
 
-**Status: working AI-assisted reference implementation, not yet submission-ready student work.**
-Codex created this implementation from the authenticated course rubric on October 6,
-2026. Aamori must review and revise the design and code, document her actual decisions,
-and record her own walkthrough. Nothing has been pushed, published, deployed or submitted.
-The course [AI Prompting Guide](https://courses.codepath.org/courses/ai201/pages/ai_prompting_guide)
-allows AI-generated components but says AI should never “Write your entire assignment
-for you.” This reference must not be presented as independently authored student work.
+**Status: implemented and locally verified AI-assisted course project; awaiting review and publication/submission approval.**
+Codex created the plan, code, tests and technical documentation from the authenticated
+course rubric. On October 6, Aamori clarified that her professor said AI could complete
+the rest and that the online outline was not current. That updated user-reported guidance
+supersedes the older outline for this task. AI assistance is disclosed; no personal
+experience, student review, or student-authored reflection is invented. Nothing has
+been pushed, published, deployed or submitted.
 
 ## Run locally
 
@@ -22,7 +22,15 @@ python app.py
 ```
 
 Open **http://127.0.0.1:5054**. The server binds only to loopback and uses an ignored
-SQLite database, `provenance.sqlite3`. No credentials are required for offline mode.
+SQLite database, `provenance.sqlite3`. No credentials are required for offline mode. To use an existing course environment
+without copying its key into this repo:
+
+```sh
+python run.py --existing-env /absolute/path/to/your/existing/course/.env
+```
+
+This reads the key into memory and sends submitted prose to Groq. Use the same existing
+account as your earlier projects. The current local preview was started this way.
 `requirements-lock.txt` records the full tested dependency set.
 
 ```sh
@@ -83,24 +91,29 @@ The first three form the text ensemble when Groq is available. Offline metadata 
 three **available** signals: stylometry, lexical evidence and process declaration.
 Offline plain text has two available signals and abstains conservatively.
 
-### Optional semantic service and actual verification result
+### Semantic service: resolved and verified live
 
-Set `GROQ_API_KEY` in your own ignored `.env` to enable semantic inference. The configured
-model is `openai/gpt-oss-120b`, matching the existing Project 1/2 configuration;
-`GROQ_MODEL` can override it. The output budget is 1600 tokens to leave room for reasoning. No credential is included
-in this repo. A read-only check with an existing course key received **HTTP 403** on
-October 6, 2026. Therefore live semantic classification is **not verified**. Four attempts
-are recorded in [live-model.json](evidence/live-model.json), all explicitly unavailable.
-The original four attempts used `llama-3.3-70b-versatile`. Follow-up diagnostic
-`GET /openai/v1/models` returned HTTP 403, plain text `error code: 1010`.
-No request with the newly aligned model was made after that access denial.
-No key was copied into this project and no new credentials were created.
-See [exact diagnostic and next step](docs/GROQ_DIAGNOSTIC.md).
+The original handwritten `urllib` client returned HTTP 403 / `error code: 1010`.
+Aamori specifically directed a comparison with earlier course projects. Projects 1/2
+use the official `groq==0.15.0` SDK with `httpx==0.28.1`, ordinary transport defaults,
+and `openai/gpt-oss-120b`. Their documentation also records empty reasoning-model
+responses at small token budgets. Project 4 now uses that same SDK and model with
+`max_completion_tokens=1600`. No custom identity headers, proxies, TLS changes,
+new credentials or account permissions were introduced.
 
-The adapter is tested with synthetic successful and malformed responses, timeouts,
-NaN, booleans, invalid types and out-of-range scores. Those are contract tests, not
-proof of real model accuracy. A configured key makes submitted prose leave the local
-machine for Groq; offline mode makes no external calls.
+The ordinary SDK successfully listed the model and completed five real classifications
+through `POST /submit`. All three **plain-text** labels were reached. See
+[live-model.json](evidence/live-model.json), [initial failure evidence](evidence/initial-urllib-failure.json),
+and [client comparison](docs/GROQ_DIAGNOSTIC.md). The Mac browser also displayed a real
+semantic score of 0.08 and a likely-human label at 0.8313 confidence for the course's
+ramen example. The original transport failure is resolved in the tested SDK path;
+this does not establish that every client/network will work.
+
+Set `GROQ_API_KEY` in an ignored `.env`, export it, or use `run.py --existing-env`.
+`GROQ_MODEL` can override the default. Provider outages, invalid responses and missing
+credentials remain explicit unavailable signals; no mock prediction is substituted.
+The adapter is tested against invalid types, NaN, booleans, out-of-range scores and
+timeouts. No key is committed or copied from earlier projects.
 
 ## Confidence scoring and validation
 
@@ -127,6 +140,21 @@ metadata submissions show all three labels (complete inputs and outputs in the
 | “Artificial intelligence represents a transformative paradigm shift…” (full course example) | AI | 0.8042 | 0.8042 | likely_ai |
 | “ok so i finally tried that new ramen place downtown and honestly? underwhelming…” (full course example) | Human | 0.1909 | 0.8091 | likely_human |
 | “The relationship between monetary policy and asset price inflation…” (formal borderline example) | Unknown | 0.5331 | 0.5331 | uncertain |
+
+The live plain-text API now adds independently recorded results:
+
+| Actual text submission | AI evidence index | Confidence | Result |
+|---|---:|---:|---|
+| Explicit AI disclosure (Codex-generated positive control) | 0.8817 | 0.8817 | likely_ai |
+| Course informal ramen review | 0.1688 | 0.8313 | likely_human |
+| Course formal monetary-policy prose | 0.5540 | 0.5540 | uncertain |
+| Course generic AI example | 0.7399 | 0.6900 | uncertain |
+| Course lightly edited AI example | 0.3395 | 0.6605 | uncertain |
+
+The generic AI sample failing to reach the AI cutoff is an honest false-negative/
+abstention limitation. No thresholds were changed to force this example into a label.
+The explicit disclosure control tests a clear positive route; it is not representative
+of undisclosed AI writing. Semantic explanations and individual scores are saved.
 
 These examples validate variation and engineering behavior, **not predictive accuracy**:
 the declarations influence the result, and the sample set is tiny. A real deployment
@@ -209,8 +237,8 @@ Example metadata contract:
 * Quoting “as an AI” can trigger the disclosure marker even in human criticism of AI.
 * Metadata can be forged. High confidence based partly on a declaration should never
   be interpreted as independent provenance verification.
-* No calibrated accuracy claim is supported. Four demonstration inputs are not a
-  scientific evaluation; the live model was blocked with HTTP 403.
+* No calibrated accuracy claim is supported. Five live examples and four offline
+  examples are functional demonstrations, not a scientific evaluation.
 * The app has no account or reviewer authentication. All local users can read logs and
   use reviewer controls. It binds to loopback; **do not deploy it as a public service**
   without authentication, authorization, privacy controls, a shared rate-limit store,
@@ -229,7 +257,7 @@ This is a real divergence from the initial normalization design, recorded after 
 first test failure. Browser testing also found that generic button cleanup re-enabled
 the appeal button after an appeal; it now stays disabled when status is under review.
 
-## AI usage disclosure — factual, pending student reflection
+## AI usage disclosure — actual directions and revisions
 
 Aamori asked Codex to identify the overdue assignment and prepare all required and
 stretch functionality. **Codex authored the reference plan, code, tests and this
@@ -244,21 +272,28 @@ claimed to have been made by Aamori:
    verification found an appeal-button state problem; Codex revised cleanup logic.
    It also kept certificate badges independent of attribution and labeled synthetic
    approvals honestly, rather than claiming a human had reviewed them.
-3. Codex tested the optional Groq adapter with an existing key. The provider returned
-   HTTP 403. It retained explicit unavailable-signal behavior and reported the failure
-   instead of inventing successful semantic results.
+3. Aamori then specifically directed Codex to inspect how earlier projects handled
+   Groq and clarified her professor's current permission for AI to finish the work.
+   The previous model-only comparison was insufficient. Comparing the actual SDK,
+   transport and dependencies led to replacing the handwritten `urllib` client with
+   the earlier projects' official SDK setup. Five real API responses and a live
+   browser result verified the fix; the initial failed results were retained.
 
-**Still required:** Aamori must understand and review the code, make and record her own
-substantive decisions, and write her genuine reflection describing what she revised,
-overrode or decided differently. Those student-specific rubric points are not complete.
-See [STUDENT_REVIEW.md](docs/STUDENT_REVIEW.md). Do not replace this disclosure with a
-fictional first-person account.
+These entries disclose who did what. They do not claim Aamori personally reviewed
+code or recorded experiences she has not reported. A final review checklist is provided
+in [STUDENT_REVIEW.md](docs/STUDENT_REVIEW.md); add personal reflections only if true.
 
 ## Submission preparation
 
 [Exact rubric coverage](docs/RUBRIC_CHECKLIST.md) · [Course findings](docs/COURSE_FINDINGS.md)
 · [Walkthrough outline](demo/WALKTHROUGH.md).
 
-No hosted GitHub URL exists yet. After student review, record the required short
-walkthrough, resolve late-credit eligibility, and request approval before creating or
-pushing a remote repository or submitting its link through Project 4's Show tab.
+The [AI-narrated technical demo](demo/provenance-guard-demo.mp4) replays actual recorded
+API evidence and explains design decisions. It is clearly labeled synthetic narration,
+not Aamori's voice or a claimed live screen recording. Its [transcript](demo/NARRATION.md)
+is included. A personal walkthrough outline is also available if the instructor expects
+Aamori on camera or narrating; that expectation has not been separately confirmed.
+
+No hosted GitHub URL exists yet. Review the deliverables and clarify late-credit policy,
+then approve creating/pushing the remote repository and submitting through Project 4's
+Show tab. The Howard Canvas assignment links to the same CodePath project.

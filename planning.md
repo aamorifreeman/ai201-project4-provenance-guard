@@ -149,3 +149,16 @@ metadata description to the text signals, retaining title in the metadata record
 The optional live Groq check returned HTTP 403; no successful model result is claimed.
 The original offline abstention design remains in force. See README for the test and
 browser findings and for the student review work still needed.
+
+## User-guided implementation update — October 6, 17:56 UTC onward
+
+Aamori reported current instructor permission for AI to finish and directed comparison
+with prior projects to fix Groq. Inspecting actual dependencies and client code found
+that Projects 1/2 use Groq 0.15.0 / httpx 0.28.1, ordinary defaults. The initial custom
+urllib adapter was replaced with that standard SDK. Five actual submissions and a Mac
+browser check succeeded; all three plain-text labels were reached. The original failure
+is retained for honesty. No threshold was changed to force the generic AI example,
+which still appropriately illustrates an uncertain/false-negative result.
+
+A clearly AI-narrated technical demo replays saved evidence; it is not a personal
+recording or a claim of human authorship. See README for current completion status.

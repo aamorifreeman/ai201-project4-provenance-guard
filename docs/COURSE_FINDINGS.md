@@ -52,3 +52,19 @@ actual differing scores, all three verbatim labels, rate limits/reasoning, struc
 3+ event audit sample with an appeal, limitations, spec reflection and AI usage;
 short personal portfolio walkthrough video. README technical evidence is canonical;
 a video is still listed as a deliverable even though it has no separate rubric row.
+
+## Updated user guidance and Canvas confirmation
+
+At October 6 17:56 UTC, Aamori reported that her professor said in class AI could
+complete the rest and the online outline was not the most accurate. The task now follows
+that updated instructor guidance as reported by the user. The earlier online prohibition
+is retained above as historical context, not used to block the authorized implementation.
+AI assistance remains transparently disclosed; no personal experience is fabricated.
+
+The authenticated Howard Canvas [Project 4 assignment](https://howard.instructure.com/courses/74608/assignments/643312)
+was also inspected in the Mac browser. It says **Due Oct 5 by 11:59pm**, **25 points**,
+available September 29 at 5:10pm, and links directly to CodePath Unit 4 projects.
+No new late-policy details appeared there. Its syllabus links to a Google Doc that
+requires Google identity verification; no new login, credentials or permission was
+performed. Thus the late-policy conflict remains unresolved, but project identity is
+independently confirmed by Canvas.
