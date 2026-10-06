@@ -30,7 +30,7 @@ python -m pytest -q
 python generate_evidence.py
 ```
 
-Verification: **40 tests passed**. See [test output](evidence/test-results.txt),
+Verification: **41 tests passed**. See [test output](evidence/test-results.txt),
 [reproducible examples](evidence/examples.json), [audit sample](evidence/audit-sample.json),
 [rate-limit evidence](evidence/rate-limit.json), and [verification notes](docs/VERIFICATION.md).
 
@@ -86,11 +86,16 @@ Offline plain text has two available signals and abstains conservatively.
 ### Optional semantic service and actual verification result
 
 Set `GROQ_API_KEY` in your own ignored `.env` to enable semantic inference. The configured
-model is `llama-3.3-70b-versatile`; `GROQ_MODEL` can override it. No credential is included
+model is `openai/gpt-oss-120b`, matching the existing Project 1/2 configuration;
+`GROQ_MODEL` can override it. The output budget is 1600 tokens to leave room for reasoning. No credential is included
 in this repo. A read-only check with an existing course key received **HTTP 403** on
 October 6, 2026. Therefore live semantic classification is **not verified**. Four attempts
 are recorded in [live-model.json](evidence/live-model.json), all explicitly unavailable.
+The original four attempts used `llama-3.3-70b-versatile`. Follow-up diagnostic
+`GET /openai/v1/models` returned HTTP 403, plain text `error code: 1010`.
+No request with the newly aligned model was made after that access denial.
 No key was copied into this project and no new credentials were created.
+See [exact diagnostic and next step](docs/GROQ_DIAGNOSTIC.md).
 
 The adapter is tested with synthetic successful and malformed responses, timeouts,
 NaN, booleans, invalid types and out-of-range scores. Those are contract tests, not

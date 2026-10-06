@@ -26,7 +26,7 @@ def create_app(config=None):
     app = Flask(__name__)
     app.config.update(DATABASE=str(Path(__file__).parent/'provenance.sqlite3'),
         MAX_CONTENT_LENGTH=65536, GROQ_API_KEY=os.getenv('GROQ_API_KEY',''),
-        GROQ_MODEL=os.getenv('GROQ_MODEL','llama-3.3-70b-versatile'),
+        GROQ_MODEL=os.getenv('GROQ_MODEL','openai/gpt-oss-120b'),
         SUBMISSION_LIMIT='10 per minute;100 per day', RATELIMIT_HEADERS_ENABLED=True)
     if config:
         app.config.update(config)

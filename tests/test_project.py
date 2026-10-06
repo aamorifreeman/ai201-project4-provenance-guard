@@ -175,3 +175,12 @@ def test_ui_and_untrusted_input(client):
     # UI uses textContent, never dynamic innerHTML, so source text stays data.
     script=client.get('/static/app.js').text
     assert 'innerHTML' not in script
+
+def test_existing_course_model_request_budget():
+    def transport(req, timeout):
+        body=json.loads(req.data)
+        assert body['model']=='openai/gpt-oss-120b'
+        assert body['max_completion_tokens']==1600
+        assert body['response_format']=={'type':'json_object'}
+        return io.BytesIO(json.dumps({'choices':[{'message':{'content':json.dumps({'ai_score':.5,'explanation':'Synthetic request-contract test'})}}]}).encode())
+    assert semantic(AI,'synthetic-key',transport=transport)['available']

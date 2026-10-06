@@ -39,7 +39,7 @@ collaboration reflection remain required. The walkthrough and remote submission 
 ## Deliverables beyond rubric rows
 
 - [x] Root planning.md with architecture and AI tool plan.
-- [x] Runnable local source, dependency files, 40 passing tests, reproducible evidence.
+- [x] Runnable local source, dependency files, 41 passing tests, reproducible evidence.
 - [x] README technical sections and honest AI disclosure.
 - [x] Demo outline and student review checklist.
 - [ ] Student's substantive review, revisions and genuine reflection.
@@ -48,3 +48,13 @@ collaboration reflection remain required. The walkthrough and remote submission 
 - [ ] Late-credit eligibility clarified (portal policies conflict).
 - [ ] GitHub remote creation/push approved and performed; no hosted repo URL yet.
 - [ ] Project 4 portal submission approved and performed.
+
+## Follow-up clarification
+
+Groq is recommended, not required by name. The two-signal minimum works offline.
+However, all three categories and the high/lower confidence demonstrations currently
+use **metadata**, so plain-text end-to-end label reachability remains **unverified**.
+This is a substantive limitation, not merely an optional provider checkbox.
+Exact access response: HTTP 403 / plain text `error code: 1010`; no bypass attempted.
+See [Groq diagnostic](GROQ_DIAGNOSTIC.md). Configuration is aligned with existing
+Project 1/2 (`openai/gpt-oss-120b`, 1600-token budget); live access is still blocked.

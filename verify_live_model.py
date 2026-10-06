@@ -14,7 +14,7 @@ if not key:
     raise SystemExit('No existing Groq key found; no credential created.')
 results=[]
 for name,text in [('course_ai',AI),('course_human',HUMAN),('formal_borderline',BORDER1),('edited_ai_borderline',BORDER2)]:
-    result=analyze(text,api_key=key,model='llama-3.3-70b-versatile')
+    result=analyze(text,api_key=key,model='openai/gpt-oss-120b')
     results.append({'name':name,'input':text,'response':result})
     print(name,result['attribution'],result['confidence'], 'semantic_available='+str(result['signals'][2]['available']))
-Path('evidence/live-model.json').write_text(json.dumps({'model':'llama-3.3-70b-versatile','examples':results},indent=2)+'\n')
+Path('evidence/live-model.json').write_text(json.dumps({'model':'openai/gpt-oss-120b','examples':results},indent=2)+'\n')

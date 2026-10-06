@@ -30,3 +30,10 @@ Executed October 6, 2026 on the user's Mac with Python 3.13.7.
 Not verified: live semantic predictions, scientific calibration/accuracy, authenticated
 multi-user access, public deployment, student understanding, recorded personal video,
 late-credit eligibility or actual portal submission. No grade is guaranteed.
+
+Follow-up: sanitized provider response is HTTP 403 with body `error code: 1010`.
+Stopped that access-denied path. Updated configuration to the existing Project 1/2
+model (`openai/gpt-oss-120b`) and 1600 completion tokens, verified against current
+Groq docs and an added request-contract test. No new live inference attempted.
+Current suite: **41 passed**. Plain-text end-to-end three-label reachability remains
+unverified; metadata three-label coverage does not erase that limitation.

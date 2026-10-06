@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-06",
+  "endpoint": "https://api.groq.com/openai/v1/models",
+  "method": "GET",
+  "credential_source": "existing Project 1 environment; key neither printed nor copied",
+  "status": 403,
+  "content_type": "text/plain; charset=UTF-8",
+  "sanitized_response_body": "error code: 1010\n",
+  "classification": "access denial; no bypass attempted",
+  "original_inference_model": "llama-3.3-70b-versatile",
+  "aligned_configuration_model": "openai/gpt-oss-120b",
+  "aligned_model_live_test": "not attempted after access denial"
+}
