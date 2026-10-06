@@ -1,0 +1,22 @@
+{
+  "limits": "10 per minute;100 per day",
+  "codes": [
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    200,
+    429,
+    429
+  ],
+  "final_body": {
+    "error": "10 per 1 minute",
+    "status": 429
+  },
+  "retry_after": "60"
+}

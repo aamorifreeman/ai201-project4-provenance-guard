@@ -1,0 +1,554 @@
+{
+  "mode": "offline; synthetic fixtures only",
+  "text_examples": [
+    {
+      "name": "course_ai",
+      "input": "Artificial intelligence represents a transformative paradigm shift in modern society. It is important to note that while the benefits of AI are numerous, it is equally essential to consider the ethical implications. Furthermore, stakeholders across various sectors must collaborate to ensure responsible deployment.",
+      "response": {
+        "ai_score": 0.6908,
+        "appeal_reasoning": null,
+        "attribution": "uncertain",
+        "certificate": null,
+        "confidence": 0.69,
+        "confidence_meaning": "heuristic evidence strength; not calibrated authorship probability",
+        "content_hash": "e1650029adb4768e9f361dbb5f371f5994f707b8122c797fe3ea558504e7f526",
+        "content_id": "1934ef0c-2e66-4c0d-addc-9fdd284d587d",
+        "content_type": "text",
+        "creator_id": "synthetic-demo",
+        "label": "We cannot confidently tell how this work was made. Please do not treat this assessment as proof of AI use.",
+        "metadata": null,
+        "signals": [
+          {
+            "available": true,
+            "evidence": {
+              "punctuation_per_word": 0.0465,
+              "sentence_length_cv": 0.3793,
+              "sentences": 3,
+              "vocabulary_diversity": 0.8837,
+              "words": 43
+            },
+            "name": "stylometry",
+            "normalized_weight": 0.5556,
+            "score": 0.5235,
+            "weight": 0.25
+          },
+          {
+            "available": true,
+            "evidence": {
+              "conversational_markers": [],
+              "disclosures": [],
+              "formal_markers": [
+                "it is important to note",
+                "furthermore",
+                "transformative paradigm",
+                "stakeholders",
+                "responsible deployment"
+              ]
+            },
+            "name": "lexical",
+            "normalized_weight": 0.4444,
+            "score": 0.9,
+            "weight": 0.2
+          },
+          {
+            "available": false,
+            "evidence": {
+              "reason": "GROQ_API_KEY not configured"
+            },
+            "name": "semantic",
+            "normalized_weight": 0,
+            "score": null,
+            "weight": 0.55
+          }
+        ],
+        "status": "classified",
+        "text": "Artificial intelligence represents a transformative paradigm shift in modern society. It is important to note that while the benefits of AI are numerous, it is equally essential to consider the ethical implications. Furthermore, stakeholders across various sectors must collaborate to ensure responsible deployment.",
+        "timestamp": "2026-10-06T16:34:13.168954+00:00",
+        "uncertainty_reasons": [
+          "Fewer than three available signals; conservative abstention."
+        ]
+      }
+    },
+    {
+      "name": "course_human",
+      "input": "ok so i finally tried that new ramen place downtown and honestly? underwhelming. the broth was fine but they put WAY too much sodium in it and i was thirsty for like three hours after. my friend got the spicy version and said it was better. probably won't go back unless someone drags me there",
+      "response": {
+        "ai_score": 0.2772,
+        "appeal_reasoning": null,
+        "attribution": "uncertain",
+        "certificate": null,
+        "confidence": 0.69,
+        "confidence_meaning": "heuristic evidence strength; not calibrated authorship probability",
+        "content_hash": "2fcbb878547cc378d1f3a0bca6fafbe70c235fb7207fe747fcd4710b31ed8957",
+        "content_id": "831aa7d4-42d0-4cbc-9c85-98448b5650d6",
+        "content_type": "text",
+        "creator_id": "synthetic-demo",
+        "label": "We cannot confidently tell how this work was made. Please do not treat this assessment as proof of AI use.",
+        "metadata": null,
+        "signals": [
+          {
+            "available": true,
+            "evidence": {
+              "punctuation_per_word": 0.0182,
+              "sentence_length_cv": 0.6112,
+              "sentences": 5,
+              "vocabulary_diversity": 0.8727,
+              "words": 55
+            },
+            "name": "stylometry",
+            "normalized_weight": 0.5556,
+            "score": 0.435,
+            "weight": 0.25
+          },
+          {
+            "available": true,
+            "evidence": {
+              "conversational_markers": [
+                "honestly",
+                "ok so",
+                "my friend",
+                "won't",
+                "underwhelming"
+              ],
+              "disclosures": [],
+              "formal_markers": []
+            },
+            "name": "lexical",
+            "normalized_weight": 0.4444,
+            "score": 0.08,
+            "weight": 0.2
+          },
+          {
+            "available": false,
+            "evidence": {
+              "reason": "GROQ_API_KEY not configured"
+            },
+            "name": "semantic",
+            "normalized_weight": 0,
+            "score": null,
+            "weight": 0.55
+          }
+        ],
+        "status": "classified",
+        "text": "ok so i finally tried that new ramen place downtown and honestly? underwhelming. the broth was fine but they put WAY too much sodium in it and i was thirsty for like three hours after. my friend got the spicy version and said it was better. probably won't go back unless someone drags me there",
+        "timestamp": "2026-10-06T16:34:13.170589+00:00",
+        "uncertainty_reasons": [
+          "Fewer than three available signals; conservative abstention."
+        ]
+      }
+    },
+    {
+      "name": "formal_borderline",
+      "input": "The relationship between monetary policy and asset price inflation has been extensively studied in the literature. Central banks face a fundamental tension between their mandate for price stability and the unintended consequences of prolonged low interest rates on equity and real estate valuations.",
+      "response": {
+        "ai_score": 0.5588,
+        "appeal_reasoning": null,
+        "attribution": "uncertain",
+        "certificate": null,
+        "confidence": 0.5588,
+        "confidence_meaning": "heuristic evidence strength; not calibrated authorship probability",
+        "content_hash": "92994cf3b4a8ccc9870e7e06cd1d2c53a22e3cf333fc8bb3867e56ba9662b8ad",
+        "content_id": "a389624e-7918-482e-86b9-5c790e059ff8",
+        "content_type": "text",
+        "creator_id": "synthetic-demo",
+        "label": "We cannot confidently tell how this work was made. Please do not treat this assessment as proof of AI use.",
+        "metadata": null,
+        "signals": [
+          {
+            "available": true,
+            "evidence": {
+              "punctuation_per_word": 0.0,
+              "sentence_length_cv": 0.2558,
+              "sentences": 2,
+              "vocabulary_diversity": 0.8605,
+              "words": 43
+            },
+            "name": "stylometry",
+            "normalized_weight": 0.5556,
+            "score": 0.6058,
+            "weight": 0.25
+          },
+          {
+            "available": true,
+            "evidence": {
+              "conversational_markers": [],
+              "disclosures": [],
+              "formal_markers": []
+            },
+            "name": "lexical",
+            "normalized_weight": 0.4444,
+            "score": 0.5,
+            "weight": 0.2
+          },
+          {
+            "available": false,
+            "evidence": {
+              "reason": "GROQ_API_KEY not configured"
+            },
+            "name": "semantic",
+            "normalized_weight": 0,
+            "score": null,
+            "weight": 0.55
+          }
+        ],
+        "status": "classified",
+        "text": "The relationship between monetary policy and asset price inflation has been extensively studied in the literature. Central banks face a fundamental tension between their mandate for price stability and the unintended consequences of prolonged low interest rates on equity and real estate valuations.",
+        "timestamp": "2026-10-06T16:34:13.171876+00:00",
+        "uncertainty_reasons": [
+          "Fewer than three available signals; conservative abstention."
+        ]
+      }
+    },
+    {
+      "name": "edited_ai_borderline",
+      "input": "I've been thinking a lot about remote work lately. There are genuine tradeoffs \u2014 flexibility and no commute on one side, isolation and blurred work-life boundaries on the other. Studies show productivity varies widely by individual and role type.",
+      "response": {
+        "ai_score": 0.5099,
+        "appeal_reasoning": null,
+        "attribution": "uncertain",
+        "certificate": null,
+        "confidence": 0.5099,
+        "confidence_meaning": "heuristic evidence strength; not calibrated authorship probability",
+        "content_hash": "a481046aeb9c631996eb97df3571aea634275f4b9aa9fc95657e43191b74a807",
+        "content_id": "150e3d52-73bd-4715-9ffb-7b86b44e8c2c",
+        "content_type": "text",
+        "creator_id": "synthetic-demo",
+        "label": "We cannot confidently tell how this work was made. Please do not treat this assessment as proof of AI use.",
+        "metadata": null,
+        "signals": [
+          {
+            "available": true,
+            "evidence": {
+              "punctuation_per_word": 0.0513,
+              "sentence_length_cv": 0.382,
+              "sentences": 3,
+              "vocabulary_diversity": 0.8974,
+              "words": 39
+            },
+            "name": "stylometry",
+            "normalized_weight": 0.5556,
+            "score": 0.5178,
+            "weight": 0.25
+          },
+          {
+            "available": true,
+            "evidence": {
+              "conversational_markers": [],
+              "disclosures": [],
+              "formal_markers": []
+            },
+            "name": "lexical",
+            "normalized_weight": 0.4444,
+            "score": 0.5,
+            "weight": 0.2
+          },
+          {
+            "available": false,
+            "evidence": {
+              "reason": "GROQ_API_KEY not configured"
+            },
+            "name": "semantic",
+            "normalized_weight": 0,
+            "score": null,
+            "weight": 0.55
+          }
+        ],
+        "status": "classified",
+        "text": "I've been thinking a lot about remote work lately. There are genuine tradeoffs \u2014 flexibility and no commute on one side, isolation and blurred work-life boundaries on the other. Studies show productivity varies widely by individual and role type.",
+        "timestamp": "2026-10-06T16:34:13.173598+00:00",
+        "uncertainty_reasons": [
+          "Fewer than three available signals; conservative abstention."
+        ]
+      }
+    }
+  ],
+  "metadata_examples": [
+    {
+      "name": "declared_ai",
+      "response": {
+        "ai_score": 0.8042,
+        "appeal_reasoning": null,
+        "attribution": "likely_ai",
+        "certificate": null,
+        "confidence": 0.8042,
+        "confidence_meaning": "heuristic evidence strength; not calibrated authorship probability",
+        "content_hash": "d46c7c8a283d11ca7f80a471d9685a1962566c7251bcf168c3beeaf4af238715",
+        "content_id": "a1e9c08a-0bcc-4ff6-8a23-146680490dec",
+        "content_type": "metadata",
+        "creator_id": "synthetic-demo",
+        "label": "This work shows strong signs of AI generation. This assessment can be wrong; the creator can request a review.",
+        "metadata": {
+          "creation_method": "ai",
+          "description": "Artificial intelligence represents a transformative paradigm shift in modern society. It is important to note that while the benefits of AI are numerous, it is equally essential to consider the ethical implications. Furthermore, stakeholders across various sectors must collaborate to ensure responsible deployment.",
+          "revisions": [],
+          "title": "declared_ai",
+          "tools": []
+        },
+        "signals": [
+          {
+            "available": true,
+            "evidence": {
+              "punctuation_per_word": 0.0465,
+              "sentence_length_cv": 0.3793,
+              "sentences": 3,
+              "vocabulary_diversity": 0.8837,
+              "words": 43
+            },
+            "name": "stylometry",
+            "normalized_weight": 0.3125,
+            "score": 0.5235,
+            "weight": 0.25
+          },
+          {
+            "available": true,
+            "evidence": {
+              "conversational_markers": [],
+              "disclosures": [],
+              "formal_markers": [
+                "it is important to note",
+                "furthermore",
+                "transformative paradigm",
+                "stakeholders",
+                "responsible deployment"
+              ]
+            },
+            "name": "lexical",
+            "normalized_weight": 0.25,
+            "score": 0.9,
+            "weight": 0.2
+          },
+          {
+            "available": false,
+            "evidence": {
+              "reason": "GROQ_API_KEY not configured"
+            },
+            "name": "semantic",
+            "normalized_weight": 0,
+            "score": null,
+            "weight": 0.55
+          },
+          {
+            "available": true,
+            "evidence": {
+              "ai_tool_declared": false,
+              "creation_method": "ai",
+              "revision_count": 0,
+              "tools": [],
+              "trust": "unverified self-report"
+            },
+            "name": "process_declaration",
+            "normalized_weight": 0.4375,
+            "score": 0.95,
+            "weight": 0.35
+          }
+        ],
+        "status": "classified",
+        "text": "Artificial intelligence represents a transformative paradigm shift in modern society. It is important to note that while the benefits of AI are numerous, it is equally essential to consider the ethical implications. Furthermore, stakeholders across various sectors must collaborate to ensure responsible deployment.",
+        "timestamp": "2026-10-06T16:34:13.174890+00:00",
+        "uncertainty_reasons": []
+      }
+    },
+    {
+      "name": "declared_human",
+      "response": {
+        "ai_score": 0.1909,
+        "appeal_reasoning": null,
+        "attribution": "likely_human",
+        "certificate": null,
+        "confidence": 0.8091,
+        "confidence_meaning": "heuristic evidence strength; not calibrated authorship probability",
+        "content_hash": "e2f66a0ead858ac63e92e9fa2cc3a07e62547842a308269501893320949a79fd",
+        "content_id": "f13ecf8c-6d67-46d6-80aa-427ead226b10",
+        "content_type": "metadata",
+        "creator_id": "synthetic-demo",
+        "label": "This work shows strong signs of human writing. This is an estimate, not proof of authorship.",
+        "metadata": {
+          "creation_method": "human",
+          "description": "ok so i finally tried that new ramen place downtown and honestly? underwhelming. the broth was fine but they put WAY too much sodium in it and i was thirsty for like three hours after. my friend got the spicy version and said it was better. probably won't go back unless someone drags me there",
+          "revisions": [],
+          "title": "declared_human",
+          "tools": []
+        },
+        "signals": [
+          {
+            "available": true,
+            "evidence": {
+              "punctuation_per_word": 0.0182,
+              "sentence_length_cv": 0.6112,
+              "sentences": 5,
+              "vocabulary_diversity": 0.8727,
+              "words": 55
+            },
+            "name": "stylometry",
+            "normalized_weight": 0.3125,
+            "score": 0.435,
+            "weight": 0.25
+          },
+          {
+            "available": true,
+            "evidence": {
+              "conversational_markers": [
+                "honestly",
+                "ok so",
+                "my friend",
+                "won't",
+                "underwhelming"
+              ],
+              "disclosures": [],
+              "formal_markers": []
+            },
+            "name": "lexical",
+            "normalized_weight": 0.25,
+            "score": 0.08,
+            "weight": 0.2
+          },
+          {
+            "available": false,
+            "evidence": {
+              "reason": "GROQ_API_KEY not configured"
+            },
+            "name": "semantic",
+            "normalized_weight": 0,
+            "score": null,
+            "weight": 0.55
+          },
+          {
+            "available": true,
+            "evidence": {
+              "ai_tool_declared": false,
+              "creation_method": "human",
+              "revision_count": 0,
+              "tools": [],
+              "trust": "unverified self-report"
+            },
+            "name": "process_declaration",
+            "normalized_weight": 0.4375,
+            "score": 0.08,
+            "weight": 0.35
+          }
+        ],
+        "status": "classified",
+        "text": "ok so i finally tried that new ramen place downtown and honestly? underwhelming. the broth was fine but they put WAY too much sodium in it and i was thirsty for like three hours after. my friend got the spicy version and said it was better. probably won't go back unless someone drags me there",
+        "timestamp": "2026-10-06T16:34:13.176142+00:00",
+        "uncertainty_reasons": []
+      }
+    },
+    {
+      "name": "unknown",
+      "response": {
+        "ai_score": 0.5331,
+        "appeal_reasoning": null,
+        "attribution": "uncertain",
+        "certificate": null,
+        "confidence": 0.5331,
+        "confidence_meaning": "heuristic evidence strength; not calibrated authorship probability",
+        "content_hash": "38139fcb7086d75f9dfda2eb04e27e54309022c27157667fe70691d8bb0e4b72",
+        "content_id": "0df2eed1-d527-4382-b161-349dc903b9fb",
+        "content_type": "metadata",
+        "creator_id": "synthetic-demo",
+        "label": "We cannot confidently tell how this work was made. Please do not treat this assessment as proof of AI use.",
+        "metadata": {
+          "creation_method": "unknown",
+          "description": "The relationship between monetary policy and asset price inflation has been extensively studied in the literature. Central banks face a fundamental tension between their mandate for price stability and the unintended consequences of prolonged low interest rates on equity and real estate valuations.",
+          "revisions": [],
+          "title": "unknown",
+          "tools": []
+        },
+        "signals": [
+          {
+            "available": true,
+            "evidence": {
+              "punctuation_per_word": 0.0,
+              "sentence_length_cv": 0.2558,
+              "sentences": 2,
+              "vocabulary_diversity": 0.8605,
+              "words": 43
+            },
+            "name": "stylometry",
+            "normalized_weight": 0.3125,
+            "score": 0.6058,
+            "weight": 0.25
+          },
+          {
+            "available": true,
+            "evidence": {
+              "conversational_markers": [],
+              "disclosures": [],
+              "formal_markers": []
+            },
+            "name": "lexical",
+            "normalized_weight": 0.25,
+            "score": 0.5,
+            "weight": 0.2
+          },
+          {
+            "available": false,
+            "evidence": {
+              "reason": "GROQ_API_KEY not configured"
+            },
+            "name": "semantic",
+            "normalized_weight": 0,
+            "score": null,
+            "weight": 0.55
+          },
+          {
+            "available": true,
+            "evidence": {
+              "ai_tool_declared": false,
+              "creation_method": "unknown",
+              "revision_count": 0,
+              "tools": [],
+              "trust": "unverified self-report"
+            },
+            "name": "process_declaration",
+            "normalized_weight": 0.4375,
+            "score": 0.5,
+            "weight": 0.35
+          }
+        ],
+        "status": "classified",
+        "text": "The relationship between monetary policy and asset price inflation has been extensively studied in the literature. Central banks face a fundamental tension between their mandate for price stability and the unintended consequences of prolonged low interest rates on equity and real estate valuations.",
+        "timestamp": "2026-10-06T16:34:13.177368+00:00",
+        "uncertainty_reasons": []
+      }
+    }
+  ],
+  "appeal": {
+    "content_id": "a1e9c08a-0bcc-4ff6-8a23-146680490dec",
+    "message": "Appeal received; original decision preserved.",
+    "status": "under_review"
+  },
+  "certificate_workflow": {
+    "certificate": {
+      "certificate_id": "5ba93c9e-785a-47ed-abbe-7a9c27e4837b",
+      "content_hash": "e2f66a0ead858ac63e92e9fa2cc3a07e62547842a308269501893320949a79fd",
+      "issued_at": "2026-10-06T16:34:13.181104+00:00",
+      "label": "Verified human \u2014 draft/process reviewed (demo credential; not proof).",
+      "reviewer": "AUTOMATED TEST FIXTURE \u2014 not a human review",
+      "scope": "Local demonstration; draft/process review only"
+    },
+    "review": {
+      "content_hash": "e2f66a0ead858ac63e92e9fa2cc3a07e62547842a308269501893320949a79fd",
+      "content_id": "f13ecf8c-6d67-46d6-80aa-427ead226b10",
+      "earlier_draft": "The ramen place had salty broth. My friend chose spicy ramen.",
+      "process_explanation": "Synthetic fixture: a draft was revised into an informal review with personal observations.",
+      "review_notes": "Synthetic workflow test only. No real creator verification was performed.",
+      "reviewed_at": "2026-10-06T16:34:13.180957+00:00",
+      "reviewer": "AUTOMATED TEST FIXTURE \u2014 not a human review",
+      "status": "approved",
+      "timestamp": "2026-10-06T16:34:13.179995+00:00",
+      "verification_id": "f1022420-afcb-4cb4-935e-464f00d55b98"
+    }
+  },
+  "analytics": {
+    "appeal_rate": 0.1429,
+    "detection_patterns": {
+      "likely_ai": 1,
+      "likely_human": 1,
+      "uncertain": 5
+    },
+    "mean_confidence": 0.6564,
+    "total_submissions": 7,
+    "verified_count": 1
+  }
+}

@@ -1,0 +1,650 @@
+{
+  "entries": [
+    {
+      "ai_score": 0.1909,
+      "appeal_reasoning": null,
+      "approved": true,
+      "attribution": "likely_human",
+      "confidence": 0.8091,
+      "content_id": "f13ecf8c-6d67-46d6-80aa-427ead226b10",
+      "creator_id": "synthetic-demo",
+      "event": "verification_reviewed",
+      "event_id": 10,
+      "label": "This work shows strong signs of human writing. This is an estimate, not proof of authorship.",
+      "review_notes": "Synthetic workflow test only. No real creator verification was performed.",
+      "reviewer": "AUTOMATED TEST FIXTURE \u2014 not a human review",
+      "signals": [
+        {
+          "available": true,
+          "evidence": {
+            "punctuation_per_word": 0.0182,
+            "sentence_length_cv": 0.6112,
+            "sentences": 5,
+            "vocabulary_diversity": 0.8727,
+            "words": 55
+          },
+          "name": "stylometry",
+          "normalized_weight": 0.3125,
+          "score": 0.435,
+          "weight": 0.25
+        },
+        {
+          "available": true,
+          "evidence": {
+            "conversational_markers": [
+              "honestly",
+              "ok so",
+              "my friend",
+              "won't",
+              "underwhelming"
+            ],
+            "disclosures": [],
+            "formal_markers": []
+          },
+          "name": "lexical",
+          "normalized_weight": 0.25,
+          "score": 0.08,
+          "weight": 0.2
+        },
+        {
+          "available": false,
+          "evidence": {
+            "reason": "GROQ_API_KEY not configured"
+          },
+          "name": "semantic",
+          "normalized_weight": 0,
+          "score": null,
+          "weight": 0.55
+        },
+        {
+          "available": true,
+          "evidence": {
+            "ai_tool_declared": false,
+            "creation_method": "human",
+            "revision_count": 0,
+            "tools": [],
+            "trust": "unverified self-report"
+          },
+          "name": "process_declaration",
+          "normalized_weight": 0.4375,
+          "score": 0.08,
+          "weight": 0.35
+        }
+      ],
+      "status": "classified",
+      "timestamp": "2026-10-06T16:34:13.181218+00:00",
+      "verification_id": "f1022420-afcb-4cb4-935e-464f00d55b98"
+    },
+    {
+      "ai_score": 0.1909,
+      "appeal_reasoning": null,
+      "attribution": "likely_human",
+      "confidence": 0.8091,
+      "content_id": "f13ecf8c-6d67-46d6-80aa-427ead226b10",
+      "creator_id": "synthetic-demo",
+      "event": "verification_requested",
+      "event_id": 9,
+      "label": "This work shows strong signs of human writing. This is an estimate, not proof of authorship.",
+      "signals": [
+        {
+          "available": true,
+          "evidence": {
+            "punctuation_per_word": 0.0182,
+            "sentence_length_cv": 0.6112,
+            "sentences": 5,
+            "vocabulary_diversity": 0.8727,
+            "words": 55
+          },
+          "name": "stylometry",
+          "normalized_weight": 0.3125,
+          "score": 0.435,
+          "weight": 0.25
+        },
+        {
+          "available": true,
+          "evidence": {
+            "conversational_markers": [
+              "honestly",
+              "ok so",
+              "my friend",
+              "won't",
+              "underwhelming"
+            ],
+            "disclosures": [],
+            "formal_markers": []
+          },
+          "name": "lexical",
+          "normalized_weight": 0.25,
+          "score": 0.08,
+          "weight": 0.2
+        },
+        {
+          "available": false,
+          "evidence": {
+            "reason": "GROQ_API_KEY not configured"
+          },
+          "name": "semantic",
+          "normalized_weight": 0,
+          "score": null,
+          "weight": 0.55
+        },
+        {
+          "available": true,
+          "evidence": {
+            "ai_tool_declared": false,
+            "creation_method": "human",
+            "revision_count": 0,
+            "tools": [],
+            "trust": "unverified self-report"
+          },
+          "name": "process_declaration",
+          "normalized_weight": 0.4375,
+          "score": 0.08,
+          "weight": 0.35
+        }
+      ],
+      "status": "classified",
+      "timestamp": "2026-10-06T16:34:13.180175+00:00",
+      "verification_id": "f1022420-afcb-4cb4-935e-464f00d55b98"
+    },
+    {
+      "ai_score": 0.8042,
+      "appeal_reasoning": "Synthetic test appeal: please review the original attribution and process.",
+      "attribution": "likely_ai",
+      "confidence": 0.8042,
+      "content_id": "a1e9c08a-0bcc-4ff6-8a23-146680490dec",
+      "creator_id": "synthetic-demo",
+      "event": "appeal",
+      "event_id": 8,
+      "label": "This work shows strong signs of AI generation. This assessment can be wrong; the creator can request a review.",
+      "original_decision": {
+        "ai_score": 0.8042,
+        "attribution": "likely_ai",
+        "confidence": 0.8042
+      },
+      "signals": [
+        {
+          "available": true,
+          "evidence": {
+            "punctuation_per_word": 0.0465,
+            "sentence_length_cv": 0.3793,
+            "sentences": 3,
+            "vocabulary_diversity": 0.8837,
+            "words": 43
+          },
+          "name": "stylometry",
+          "normalized_weight": 0.3125,
+          "score": 0.5235,
+          "weight": 0.25
+        },
+        {
+          "available": true,
+          "evidence": {
+            "conversational_markers": [],
+            "disclosures": [],
+            "formal_markers": [
+              "it is important to note",
+              "furthermore",
+              "transformative paradigm",
+              "stakeholders",
+              "responsible deployment"
+            ]
+          },
+          "name": "lexical",
+          "normalized_weight": 0.25,
+          "score": 0.9,
+          "weight": 0.2
+        },
+        {
+          "available": false,
+          "evidence": {
+            "reason": "GROQ_API_KEY not configured"
+          },
+          "name": "semantic",
+          "normalized_weight": 0,
+          "score": null,
+          "weight": 0.55
+        },
+        {
+          "available": true,
+          "evidence": {
+            "ai_tool_declared": false,
+            "creation_method": "ai",
+            "revision_count": 0,
+            "tools": [],
+            "trust": "unverified self-report"
+          },
+          "name": "process_declaration",
+          "normalized_weight": 0.4375,
+          "score": 0.95,
+          "weight": 0.35
+        }
+      ],
+      "status": "under_review",
+      "timestamp": "2026-10-06T16:34:13.179054+00:00"
+    },
+    {
+      "ai_score": 0.5331,
+      "appeal_reasoning": null,
+      "attribution": "uncertain",
+      "confidence": 0.5331,
+      "content_id": "0df2eed1-d527-4382-b161-349dc903b9fb",
+      "creator_id": "synthetic-demo",
+      "event": "classification",
+      "event_id": 7,
+      "label": "We cannot confidently tell how this work was made. Please do not treat this assessment as proof of AI use.",
+      "signals": [
+        {
+          "available": true,
+          "evidence": {
+            "punctuation_per_word": 0.0,
+            "sentence_length_cv": 0.2558,
+            "sentences": 2,
+            "vocabulary_diversity": 0.8605,
+            "words": 43
+          },
+          "name": "stylometry",
+          "normalized_weight": 0.3125,
+          "score": 0.6058,
+          "weight": 0.25
+        },
+        {
+          "available": true,
+          "evidence": {
+            "conversational_markers": [],
+            "disclosures": [],
+            "formal_markers": []
+          },
+          "name": "lexical",
+          "normalized_weight": 0.25,
+          "score": 0.5,
+          "weight": 0.2
+        },
+        {
+          "available": false,
+          "evidence": {
+            "reason": "GROQ_API_KEY not configured"
+          },
+          "name": "semantic",
+          "normalized_weight": 0,
+          "score": null,
+          "weight": 0.55
+        },
+        {
+          "available": true,
+          "evidence": {
+            "ai_tool_declared": false,
+            "creation_method": "unknown",
+            "revision_count": 0,
+            "tools": [],
+            "trust": "unverified self-report"
+          },
+          "name": "process_declaration",
+          "normalized_weight": 0.4375,
+          "score": 0.5,
+          "weight": 0.35
+        }
+      ],
+      "status": "classified",
+      "timestamp": "2026-10-06T16:34:13.177689+00:00"
+    },
+    {
+      "ai_score": 0.1909,
+      "appeal_reasoning": null,
+      "attribution": "likely_human",
+      "confidence": 0.8091,
+      "content_id": "f13ecf8c-6d67-46d6-80aa-427ead226b10",
+      "creator_id": "synthetic-demo",
+      "event": "classification",
+      "event_id": 6,
+      "label": "This work shows strong signs of human writing. This is an estimate, not proof of authorship.",
+      "signals": [
+        {
+          "available": true,
+          "evidence": {
+            "punctuation_per_word": 0.0182,
+            "sentence_length_cv": 0.6112,
+            "sentences": 5,
+            "vocabulary_diversity": 0.8727,
+            "words": 55
+          },
+          "name": "stylometry",
+          "normalized_weight": 0.3125,
+          "score": 0.435,
+          "weight": 0.25
+        },
+        {
+          "available": true,
+          "evidence": {
+            "conversational_markers": [
+              "honestly",
+              "ok so",
+              "my friend",
+              "won't",
+              "underwhelming"
+            ],
+            "disclosures": [],
+            "formal_markers": []
+          },
+          "name": "lexical",
+          "normalized_weight": 0.25,
+          "score": 0.08,
+          "weight": 0.2
+        },
+        {
+          "available": false,
+          "evidence": {
+            "reason": "GROQ_API_KEY not configured"
+          },
+          "name": "semantic",
+          "normalized_weight": 0,
+          "score": null,
+          "weight": 0.55
+        },
+        {
+          "available": true,
+          "evidence": {
+            "ai_tool_declared": false,
+            "creation_method": "human",
+            "revision_count": 0,
+            "tools": [],
+            "trust": "unverified self-report"
+          },
+          "name": "process_declaration",
+          "normalized_weight": 0.4375,
+          "score": 0.08,
+          "weight": 0.35
+        }
+      ],
+      "status": "classified",
+      "timestamp": "2026-10-06T16:34:13.176473+00:00"
+    },
+    {
+      "ai_score": 0.8042,
+      "appeal_reasoning": null,
+      "attribution": "likely_ai",
+      "confidence": 0.8042,
+      "content_id": "a1e9c08a-0bcc-4ff6-8a23-146680490dec",
+      "creator_id": "synthetic-demo",
+      "event": "classification",
+      "event_id": 5,
+      "label": "This work shows strong signs of AI generation. This assessment can be wrong; the creator can request a review.",
+      "signals": [
+        {
+          "available": true,
+          "evidence": {
+            "punctuation_per_word": 0.0465,
+            "sentence_length_cv": 0.3793,
+            "sentences": 3,
+            "vocabulary_diversity": 0.8837,
+            "words": 43
+          },
+          "name": "stylometry",
+          "normalized_weight": 0.3125,
+          "score": 0.5235,
+          "weight": 0.25
+        },
+        {
+          "available": true,
+          "evidence": {
+            "conversational_markers": [],
+            "disclosures": [],
+            "formal_markers": [
+              "it is important to note",
+              "furthermore",
+              "transformative paradigm",
+              "stakeholders",
+              "responsible deployment"
+            ]
+          },
+          "name": "lexical",
+          "normalized_weight": 0.25,
+          "score": 0.9,
+          "weight": 0.2
+        },
+        {
+          "available": false,
+          "evidence": {
+            "reason": "GROQ_API_KEY not configured"
+          },
+          "name": "semantic",
+          "normalized_weight": 0,
+          "score": null,
+          "weight": 0.55
+        },
+        {
+          "available": true,
+          "evidence": {
+            "ai_tool_declared": false,
+            "creation_method": "ai",
+            "revision_count": 0,
+            "tools": [],
+            "trust": "unverified self-report"
+          },
+          "name": "process_declaration",
+          "normalized_weight": 0.4375,
+          "score": 0.95,
+          "weight": 0.35
+        }
+      ],
+      "status": "classified",
+      "timestamp": "2026-10-06T16:34:13.175265+00:00"
+    },
+    {
+      "ai_score": 0.5099,
+      "appeal_reasoning": null,
+      "attribution": "uncertain",
+      "confidence": 0.5099,
+      "content_id": "150e3d52-73bd-4715-9ffb-7b86b44e8c2c",
+      "creator_id": "synthetic-demo",
+      "event": "classification",
+      "event_id": 4,
+      "label": "We cannot confidently tell how this work was made. Please do not treat this assessment as proof of AI use.",
+      "signals": [
+        {
+          "available": true,
+          "evidence": {
+            "punctuation_per_word": 0.0513,
+            "sentence_length_cv": 0.382,
+            "sentences": 3,
+            "vocabulary_diversity": 0.8974,
+            "words": 39
+          },
+          "name": "stylometry",
+          "normalized_weight": 0.5556,
+          "score": 0.5178,
+          "weight": 0.25
+        },
+        {
+          "available": true,
+          "evidence": {
+            "conversational_markers": [],
+            "disclosures": [],
+            "formal_markers": []
+          },
+          "name": "lexical",
+          "normalized_weight": 0.4444,
+          "score": 0.5,
+          "weight": 0.2
+        },
+        {
+          "available": false,
+          "evidence": {
+            "reason": "GROQ_API_KEY not configured"
+          },
+          "name": "semantic",
+          "normalized_weight": 0,
+          "score": null,
+          "weight": 0.55
+        }
+      ],
+      "status": "classified",
+      "timestamp": "2026-10-06T16:34:13.173914+00:00"
+    },
+    {
+      "ai_score": 0.5588,
+      "appeal_reasoning": null,
+      "attribution": "uncertain",
+      "confidence": 0.5588,
+      "content_id": "a389624e-7918-482e-86b9-5c790e059ff8",
+      "creator_id": "synthetic-demo",
+      "event": "classification",
+      "event_id": 3,
+      "label": "We cannot confidently tell how this work was made. Please do not treat this assessment as proof of AI use.",
+      "signals": [
+        {
+          "available": true,
+          "evidence": {
+            "punctuation_per_word": 0.0,
+            "sentence_length_cv": 0.2558,
+            "sentences": 2,
+            "vocabulary_diversity": 0.8605,
+            "words": 43
+          },
+          "name": "stylometry",
+          "normalized_weight": 0.5556,
+          "score": 0.6058,
+          "weight": 0.25
+        },
+        {
+          "available": true,
+          "evidence": {
+            "conversational_markers": [],
+            "disclosures": [],
+            "formal_markers": []
+          },
+          "name": "lexical",
+          "normalized_weight": 0.4444,
+          "score": 0.5,
+          "weight": 0.2
+        },
+        {
+          "available": false,
+          "evidence": {
+            "reason": "GROQ_API_KEY not configured"
+          },
+          "name": "semantic",
+          "normalized_weight": 0,
+          "score": null,
+          "weight": 0.55
+        }
+      ],
+      "status": "classified",
+      "timestamp": "2026-10-06T16:34:13.172217+00:00"
+    },
+    {
+      "ai_score": 0.2772,
+      "appeal_reasoning": null,
+      "attribution": "uncertain",
+      "confidence": 0.69,
+      "content_id": "831aa7d4-42d0-4cbc-9c85-98448b5650d6",
+      "creator_id": "synthetic-demo",
+      "event": "classification",
+      "event_id": 2,
+      "label": "We cannot confidently tell how this work was made. Please do not treat this assessment as proof of AI use.",
+      "signals": [
+        {
+          "available": true,
+          "evidence": {
+            "punctuation_per_word": 0.0182,
+            "sentence_length_cv": 0.6112,
+            "sentences": 5,
+            "vocabulary_diversity": 0.8727,
+            "words": 55
+          },
+          "name": "stylometry",
+          "normalized_weight": 0.5556,
+          "score": 0.435,
+          "weight": 0.25
+        },
+        {
+          "available": true,
+          "evidence": {
+            "conversational_markers": [
+              "honestly",
+              "ok so",
+              "my friend",
+              "won't",
+              "underwhelming"
+            ],
+            "disclosures": [],
+            "formal_markers": []
+          },
+          "name": "lexical",
+          "normalized_weight": 0.4444,
+          "score": 0.08,
+          "weight": 0.2
+        },
+        {
+          "available": false,
+          "evidence": {
+            "reason": "GROQ_API_KEY not configured"
+          },
+          "name": "semantic",
+          "normalized_weight": 0,
+          "score": null,
+          "weight": 0.55
+        }
+      ],
+      "status": "classified",
+      "timestamp": "2026-10-06T16:34:13.170953+00:00"
+    },
+    {
+      "ai_score": 0.6908,
+      "appeal_reasoning": null,
+      "attribution": "uncertain",
+      "confidence": 0.69,
+      "content_id": "1934ef0c-2e66-4c0d-addc-9fdd284d587d",
+      "creator_id": "synthetic-demo",
+      "event": "classification",
+      "event_id": 1,
+      "label": "We cannot confidently tell how this work was made. Please do not treat this assessment as proof of AI use.",
+      "signals": [
+        {
+          "available": true,
+          "evidence": {
+            "punctuation_per_word": 0.0465,
+            "sentence_length_cv": 0.3793,
+            "sentences": 3,
+            "vocabulary_diversity": 0.8837,
+            "words": 43
+          },
+          "name": "stylometry",
+          "normalized_weight": 0.5556,
+          "score": 0.5235,
+          "weight": 0.25
+        },
+        {
+          "available": true,
+          "evidence": {
+            "conversational_markers": [],
+            "disclosures": [],
+            "formal_markers": [
+              "it is important to note",
+              "furthermore",
+              "transformative paradigm",
+              "stakeholders",
+              "responsible deployment"
+            ]
+          },
+          "name": "lexical",
+          "normalized_weight": 0.4444,
+          "score": 0.9,
+          "weight": 0.2
+        },
+        {
+          "available": false,
+          "evidence": {
+            "reason": "GROQ_API_KEY not configured"
+          },
+          "name": "semantic",
+          "normalized_weight": 0,
+          "score": null,
+          "weight": 0.55
+        }
+      ],
+      "status": "classified",
+      "timestamp": "2026-10-06T16:34:13.169441+00:00"
+    }
+  ]
+}
